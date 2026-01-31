@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    text-align: center;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* border-bottom: 1px solid #222; */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+    width: 100%;
+    height: clamp(50px, 4vw, 70px);
+    background-color: #fff;
+    color: #2195ee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(1rem, 2vw, 2rem);
+    text-transform: uppercase;
+}
+
+.logo {
+     width: clamp(30px, 7vw, 50px);
+  
+
+}
+
+.logo img {
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: 0.15rem;
+    background-color: #2195ee;
+
+}
+
+   /* NAVIGATION */
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: clamp(2rem, 3vw, 3rem);
+    list-style: none;
+}
+
+.list__item {
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+
+}
+
+.list__item a {
+    text-decoration: none;
+    color: #2195ee;
+}
+.nav li:nth-child(3) a{
+  color: #777;
+  font-weight: bold;
+}
+.gallery__page {
+    padding: clamp(1.5rem, 4vw, 2rem);
+}
+.gallery__title {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-top: clamp(3rem, 6vw, 4rem);
+  margin-bottom: clamp(1rem, 6vw, 2rem);
+  color: #2195ee;
+  
+}
+
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.gallery__item {
+    border-radius: 0.75rem;
+    background-color: #777;
+    overflow: hidden;
+}
+
+.gallery__item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.gallery__item:hover {
+    transform: scale(1.08);
+    opacity: 0.85;
+}
+
+/* footer -style*/
+.footer {
+    background-color: #fff;
+    padding: clamp(0.45rem, 2vw, 1rem);
+    text-align: center;
+     width: 100%;
+     margin: 0 auto;
+}
+
+.footer__logo img {
+    width: 40px;
+   
+}
+
+
+.footer h3 {
+    color: #2195ee;
+    padding-top: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.footer h3 span {
+    color: #777;
+}
+
+@media (max-width: 600px) {
+  .logo{
+    display: none;
+  }
+  .nav__list{
+    text-align: center;
+    padding-left: 3rem;
+  }
+  .gallery__title{
+    text-align: center;
+  }
+  .footer{
+    text-align: center;
+    background-color: transparent;
+  }
+}
